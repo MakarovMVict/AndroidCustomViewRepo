@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomImageViewMask">
+        <attr name="civ_borderColor" format="color"/>
+        <attr name="civ_borderWidth" format="dimension"/>
+        <attr name="civ_initials" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomImageViewShader">
+        <attr name="civs_borderColor" format="color"/>
+        <attr name="civs_borderWidth" format="dimension"/>
+        <attr name="civs_initials" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomAvatarImageView">
+        <attr name="caiv_borderColor" format="color"/>
+        <attr name="caiv_borderWidth" format="dimension"/>
+        <attr name="caiv_initials" format="string"/>
+    </declare-styleable>
+</resources>
