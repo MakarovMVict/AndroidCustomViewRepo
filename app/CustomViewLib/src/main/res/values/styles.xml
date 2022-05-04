@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SkeletonStyle" >
+        <item name="shimmer_duration">600</item>
+        <item name="shimmer_base_alpha">0.5</item>
+        <item name="shimmer_highlight_alpha">0.15</item>
+        <item name="shimmer_repeat_delay">1000</item>
+        <item name="shimmer_base_color">@color/shimmerGray</item>
+        <item name="shimmer_highlight_color">@color/ShimmerWhite</item>
+        <item name="shimmer_dropoff">1</item>
+    </style>
+
+    <style name="roundImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">60dp</item>
+    </style>
+</resources>

@@ -3,6 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+ext {
+    facebook_shimmer_version = "0.5.0"
+}
+
 android {
     compileSdk 31
 
@@ -27,6 +31,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -37,4 +44,9 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //Shimmer as in ios
+    implementation "com.facebook.shimmer:shimmer:$facebook_shimmer_version"
+
+    //
 }
