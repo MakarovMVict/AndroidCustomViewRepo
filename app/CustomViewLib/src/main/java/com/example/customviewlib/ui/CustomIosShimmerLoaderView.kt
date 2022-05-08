@@ -30,16 +30,16 @@ class CustomIosShimmerLoaderView(
             defStyleRes
         )
         try {
-            val skeletonLayout = attributes.getResourceId(
+            val shimmerLayout = attributes.getResourceId(
                 R.styleable.ShimmerLoaderConstraintLayout_shimmerLayout, 0
             )
-            val skeletonVisibility = attributes.getBoolean(
+            val shimmerVisibility = attributes.getBoolean(
                 R.styleable.ShimmerLoaderConstraintLayout_shimmerVisibility, false
             )
 
-            setShimmerLayout(skeletonLayout)
-            setShimmerVisibility(skeletonVisibility)
-            addView(shimmerLayout)
+            setShimmerLayout(shimmerLayout)
+            setShimmerVisibility(shimmerVisibility)
+            addView(this.shimmerLayout)
         } catch (ex: Exception) {
             Log.d(TAG, "setLayout: $ex")
         } finally {
@@ -48,9 +48,9 @@ class CustomIosShimmerLoaderView(
     }
 
     private fun handleVisibility(
-        skeletonVisibility: Boolean = false
+        shimmerVisibility: Boolean = false
     ) {
-        if (skeletonVisibility) {
+        if (shimmerVisibility) {
             shimmerLayout.visibility = View.VISIBLE
             shimmerLayout.showShimmer(true)
             shimmerLayout.startShimmer()
@@ -61,16 +61,16 @@ class CustomIosShimmerLoaderView(
         }
     }
 
-    fun setShimmerVisibility(skeletonVisibility: Boolean) {
-        handleVisibility(skeletonVisibility = skeletonVisibility)
+    fun setShimmerVisibility(shimmerVisibility: Boolean) {
+        handleVisibility(shimmerVisibility = shimmerVisibility)
     }
 
-    fun setShimmerLayout(skeletonLayout: Int) {
-        shimmerLayout.removeAllViews()
-        inflate(context, skeletonLayout, shimmerLayout)
+    fun setShimmerLayout(shimmerLayout: Int) {
+        this.shimmerLayout.removeAllViews()
+        inflate(context, shimmerLayout, this.shimmerLayout)
     }
 
     companion object {
-        private const val TAG = "SkeletonLoader"
+        private const val TAG = "ShimmerLoader"
     }
 }

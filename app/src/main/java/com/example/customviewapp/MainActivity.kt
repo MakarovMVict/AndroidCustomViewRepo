@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         loaderShimmer = binding.shimmerLoader
         customAvatarImageView = binding.aiv
 
-
 //        loaderShimmer.setShimmerVisibility(true)
 //        customAvatarImageView.visibility = View.GONE
 
