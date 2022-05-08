@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="SkeletonStyle" >
+    <style name="ShimmerStyle" >
         <item name="shimmer_duration">600</item>
         <item name="shimmer_base_alpha">0.5</item>
         <item name="shimmer_highlight_alpha">0.15</item>
